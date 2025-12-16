@@ -35,7 +35,7 @@ const HowItWorks = () => (
         <div className="container mx-auto px-6 max-w-7xl text-center">
             {/* Header Section */}
             <h4 className="text-text-sub text-base tracking-widest uppercase font-semibold mb-3">
-                Easy & Transparent Process
+                Easy & Transparent Processs
             </h4>
             <h2 className="text-4xl font-extrabold mb-16 text-text-heading">
                 Taxi Booking in 4 Simple Steps
