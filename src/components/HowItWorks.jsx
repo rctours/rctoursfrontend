@@ -1,50 +1,49 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { FaSearch, FaCar, FaClipboardCheck, FaSmile } from 'react-icons/fa';
-import { ArrowRight } from 'lucide-react'; // Using lucide-react for the arrow visual
+import { FaMapMarkedAlt, FaCar, FaPhoneAlt, FaSmile } from 'react-icons/fa';
+import { ArrowRight } from 'lucide-react';
 
 const steps = [
     {
-        icon: <FaSearch className="text-4xl text-dark-purple" />, // Use accent color
-        title: 'Search Your Dream Car',
-        desc: 'Browse our wide selection of vehicles and use smart filters to find the one perfect for your journey.',
+        icon: <FaMapMarkedAlt className="text-4xl text-dark-purple" />,
+        title: 'Choose Your Route',
+        desc: 'Local travel, outstation trip, airport pickup or drop select karein.',
         stepNumber: 1,
     },
     {
-        icon: <FaClipboardCheck className="text-4xl text-dark-purple" />, // Use accent color
-        title: 'Book Instantly Online',
-        desc: 'Select your dates and locations, then confirm your booking securely and instantly through our platform.',
+        icon: <FaCar className="text-4xl text-dark-purple" />,
+        title: 'Select Car with Driver',
+        desc: 'Ertiga, Toyota Rumion ya Sedan me se comfortable car choose karein (driver included).',
         stepNumber: 2,
     },
     {
-        icon: <FaCar className="text-4xl text-dark-purple" />, // Use accent color
-        title: 'Pick Up & Drive Free',
-        desc: 'Collect your sanitized car at the nearest location and start your trip with complete flexibility and freedom.',
+        icon: <FaPhoneAlt className="text-4xl text-dark-purple" />,
+        title: 'Confirm Booking on Call or WhatsApp',
+        desc: 'Travel details share karein aur instant taxi booking confirm karein.',
         stepNumber: 3,
     },
     {
-        icon: <FaSmile className="text-4xl text-dark-purple" />, // Use accent color
-        title: 'Easy Return Process',
-        desc: 'Return the car at your specified destination or original location at your convenience.',
+        icon: <FaSmile className="text-4xl text-dark-purple" />,
+        title: 'Enjoy Safe & Comfortable Ride',
+        desc: 'Experienced driver ke saath tension-free aur smooth journey ka anubhav lein.',
         stepNumber: 4,
     },
 ];
 
 const HowItWorks = () => (
-    <section id="how-it-works" className="py-24 bg-fuchsia-100"> {/* Changed background to white for contrast, increased padding */}
+    <section id="how-it-works" className="py-24 bg-fuchsia-100">
         <div className="container mx-auto px-6 max-w-7xl text-center">
             {/* Header Section */}
             <h4 className="text-text-sub text-base tracking-widest uppercase font-semibold mb-3">
                 Easy & Transparent Process
             </h4>
             <h2 className="text-4xl font-extrabold mb-16 text-text-heading">
-                Rent a Car in 4 Simple Steps
+                Taxi Booking in 4 Simple Steps
             </h2>
 
-            {/* Steps Grid with Visual Flow Indicators */}
+            {/* Steps Grid */}
             <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-                {/* Flow Line (Visible on larger screens) */}
+                {/* Flow Line */}
                 <div className="hidden lg:block absolute inset-0 my-auto h-0.5 bg-gray-200"></div>
 
                 {steps.map(({ icon, title, desc, stepNumber }) => (
@@ -64,14 +63,12 @@ const HowItWorks = () => (
                         <h3 className="text-xl font-bold mb-3 text-gray-900">{title}</h3>
                         <p className="text-gray-600 px-2">{desc}</p>
 
-                        {/* Arrow Indicator (Hidden on last step and large screens) */}
+                        {/* Arrow Indicators */}
                         {stepNumber < steps.length && (
                             <div className="lg:hidden absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2">
                                 <ArrowRight className="w-6 h-6 text-gray-300" />
                             </div>
                         )}
-
-                        {/* Arrow Indicator (Visible between cards on large screens) */}
                         {stepNumber < steps.length && (
                             <div className="hidden lg:block absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 z-0">
                                 <ArrowRight className="w-10 h-10 text-dark-purple/50" />
@@ -81,16 +78,15 @@ const HowItWorks = () => (
                 ))}
             </div>
 
-            {/* Final CTA/Next Step */}
-           <div className="mt-16">
-    <Link
-        to="/cars" // Use 'to' instead of 'href' for React Router
-        className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-text-light bg-primary-700 rounded-full shadow-2xl hover:bg-dark-purple/90 transition-colors duration-300 transform hover:scale-[1.02]"
-    >
-        Start Your Search Now
-    </Link>
-</div>
-
+            {/* CTA */}
+            <div className="mt-16">
+                <Link
+                    to="/cars"
+                    className="inline-flex items-center justify-center px-10 py-4 text-lg font-bold text-text-light bg-primary-700 rounded-full shadow-2xl hover:bg-dark-purple/90 transition-colors duration-300 transform hover:scale-[1.02]"
+                >
+                    Start Your Booking Now
+                </Link>
+            </div>
         </div>
     </section>
 );
