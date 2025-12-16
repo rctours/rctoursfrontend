@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* ===============================
+   ✈️ TOURS & TRAVELS THEME (v2)
+   =============================== */
+@theme {
+  /* 🌴 Primary Brand Colors */
+  --color-primary-50: #fbe4d8;
+  --color-primary-100: #dfb6b2;
+  --color-primary-300: #854f6c;
+  --color-primary-500: #522b5b; /* main  */
+  --color-primary-700: #3c003c;
+  --color-primary-900: #220022ff;
+  --color-primary-950: #120000;
+
+
+  /* 🌊 Accent Palette (Teal Ocean) */
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #ccfbf1;
+  --color-accent-300: #5eead4;
+  --color-accent-500: #14b8a6;   /* CTA Buttons / Highlights */
+  --color-accent-700: #0f766e;
+  --color-accent-900: #115e59;
+
+  /* 🌿 Neutral Palette (UI / Text) */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-500: #6b7280;
+  --color-neutral-700: #374151;
+  --color-neutral-900: #111827;
+
+  /* ==============================
+     🖌 Semantic Tokens
+     ============================== */
+
+  /* Text Colors (renamed for Tailwind detection) */
+  --color-text-heading: var(--color-primary-900);
+  --color-text-sub: var(--color-primary-700);
+  --color-text-muted: var(--color-primary-500);
+  --color-text-light: var(--color-primary-50);
+  --color-text-inverse: #ffffff; /* For dark bg sections */
+
+  /* Background Colors */
+  --color-bg-base: var(--color-neutral-50);
+  --color-bg-surface: #ffffff;
+  --color-bg-primary: var(--color-primary-500);
+  --color-bg-accent: var(--color-accent-500);
+  --color-bg-footer: var(--color-neutral-900);
+
+  /* Border Colors */
+  --color-border-default: var(--color-neutral-300);
+  --color-border-strong: var(--color-neutral-500);
+  --color-border-primary: var(--color-primary-500);
+  --color-border-accent: var(--color-accent-500);
+}
+
+/* 🌙 Dark Mode */
+html.dark {
+  @theme {
+    --color-bg-base: #0f172a;
+    --color-bg-surface: #1e293b;
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #cbd5e1;
+    --color-border-default: #334155;
+  }
+}

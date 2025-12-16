@@ -1,0 +1,100 @@
+[
+  {
+    "region": "North India",
+    "type": "Top Tourist Attractions",
+    "places": [
+      "Taj Mahal – Agra",
+      "Jaipur (Pink City) – Rajasthan",
+      "Delhi – India Gate, Red Fort, Qutub Minar",
+      "Amritsar – Golden Temple",
+      "Kashmir – Gulmarg, Srinagar, Pahalgam",
+      "Varanasi – Ganga Ghat & Kashi Vishwanath"
+    ]
+  },
+  {
+    "region": "West India",
+    "type": "Top Tourist Attractions",
+    "places": [
+      "Mumbai – Marine Drive, Gateway of India",
+      "Goa – Beaches & Nightlife",
+      "Udaipur – City of Lakes",
+      "Kutch – White Rann"
+    ]
+  },
+  {
+    "region": "South India",
+    "type": "Top Tourist Attractions",
+    "places": [
+      "Kerala – Munnar, Alleppey Backwaters",
+      "Bengaluru – Nandi Hills",
+      "Ooty – Hill Station",
+      "Kanyakumari – Sunset Point",
+      "Rameshwaram – Temple City"
+    ]
+  },
+  {
+    "region": "East India",
+    "type": "Top Tourist Attractions",
+    "places": [
+      "Kolkata – Victoria Memorial",
+      "Darjeeling – Tiger Hill",
+      "Puri – Jagannath Temple",
+      "Meghalaya – Cherrapunji & Shillong"
+    ]
+  },
+  {
+    "region": "Central India",
+    "type": "Top Tourist Attractions",
+    "places": [
+      "Kanha National Park",
+      "Pench Tiger Reserve",
+      "Khajuraho Temples"
+    ]
+  },
+
+
+
+  {
+    "region": "North India",
+    "type": "Temple & Pilgrimage",
+    "places": [
+      "Kashi Vishwanath Temple – Varanasi",
+      "Kedarnath Temple – Uttarakhand",
+      "Badrinath Temple – Uttarakhand",
+      "Vaishno Devi – Jammu & Kashmir",
+      "Golden Temple – Amritsar",
+      "Akshardham Temple – Delhi"
+    ]
+  },
+  {
+    "region": "West India",
+    "type": "Temple & Pilgrimage",
+    "places": [
+      "Somnath Temple – Gujarat",
+      "Dwarkadhish Temple – Gujarat",
+      "Siddhivinayak Temple – Mumbai",
+      "Shirdi Sai Baba Temple – Maharashtra",
+      "Mahakaleshwar Jyotirlinga – Ujjain"
+    ]
+  },
+  {
+    "region": "South India",
+    "type": "Temple & Pilgrimage",
+    "places": [
+      "Tirupati Balaji – Andhra Pradesh",
+      "Meenakshi Temple – Madurai",
+      "Rameshwaram Ramanathaswamy Temple – Tamil Nadu",
+      "Sabarimala Temple – Kerala",
+      "Sri Padmanabhaswamy Temple – Kerala"
+    ]
+  },
+  {
+    "region": "East India",
+    "type": "Temple & Pilgrimage",
+    "places": [
+      "Jagannath Temple – Puri",
+      "Konark Sun Temple – Odisha",
+      "Kamakhya Temple – Assam"
+    ]
+  }
+]

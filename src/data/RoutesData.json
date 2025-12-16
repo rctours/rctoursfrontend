@@ -1,0 +1,228 @@
+[
+  {
+    "name": "Mumbai",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Pune",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Hyderabad",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Bhopal",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Indore",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Raipur",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Jabalpur",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Amravati",
+    
+    "category": "Major Cities"
+  },
+  {
+    "name": "Ch. Sambhaji Nagar",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Nashik",
+   
+    "category": "Major Cities"
+  },
+  {
+    "name": "Bhilai",
+   
+    "category": "Major Cities"
+  },
+
+
+  {
+    "name": "Shirdi (Sai Baba Temple)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Pandharpur (Vitthal Rukmini Temple)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Trimbakeshwar (Jyotirlinga - Nashik)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Tuljapur (Tulja Bhavani Temple)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Akkalkot (Swami Samarth Temple)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Omkareshwar (MP)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Mahakaleshwar (Ujjain Jyotirlinga)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Raman Science Ashram (Wardha)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Ramtek",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Parli Vaijnath",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Ghushmeshwar Jyotirlinga (Ch. Sambhaji Nagar)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Shani Shingnapur Temple",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Mahalakshmi Temple (Kolhapur)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Shegaon (Gajanan Maharaj Temple)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Renuka Mata Temple (Mahur)",
+    
+    "category": "Pilgrimage"
+  },
+  {
+    "name": "Khandoba Temple (Jejuri)",
+    
+    "category": "Pilgrimage"
+  },
+
+
+  {
+    "name": "Tadoba National Park",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Pench National Park",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Chikhaldara (Hill Station)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Melghat Tiger Reserve",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Lonar Crater Lake (Buldhana)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Ajanta–Ellora Caves",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Nashik (Vineyards & Temples)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Pachmarhi (Hill Station)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Bhopal (Lake City)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Mahabaleshwar (Hill Station)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Goa (Beaches)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Lonavala / Khandala",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Hyderabad (City Tour)",
+   
+    "category": "Holiday"
+  },
+  {
+    "name": "Kokan / Ratnagiri / GanapatiPule",
+   
+    "category": "Holiday"
+  },
+
+
+  {
+    "name": "Nagpur Airport",
+   
+    "category": "Airport Transfer"
+  },
+  {
+    "name": "Hyderabad Airport",
+   
+    "category": "Airport Transfer"
+  },
+  {
+    "name": "Ch. Sambhaji Nagar Airport",
+   
+    "category": "Airport Transfer"
+  }
+]
