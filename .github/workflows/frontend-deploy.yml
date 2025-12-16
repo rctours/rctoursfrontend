@@ -9,24 +9,60 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      # 1. Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3. Deploy to VPS via SSH
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_KEY }}
+          port: 22
           script: |
             set -e
-            cd /var/www/rctoursfrontend
-            git reset --hard
-            git pull origin main
+            echo "Starting deployment..."
+
+            # 1️⃣ Prepare temporary build folder
+            TMP_BUILD="/tmp/rctoursfrontend_build"
+            echo "Cleaning temporary folder..."
+            rm -rf $TMP_BUILD
+            mkdir -p $TMP_BUILD
+
+            echo "Cloning repo into temp folder..."
+            git clone -b main https://github.com/rctours/rctoursfrontend.git $TMP_BUILD
+
+            # 2️⃣ Build the app
+            cd $TMP_BUILD
+            echo "Installing dependencies..."
             npm ci
+            echo "Building Vite app..."
             npm run build
-            # Ensure Nginx serves the build folder
-            chown -R www-data:www-data dist
 
+            # 3️⃣ Deploy to Nginx folder
+            DEPLOY_DIR="/var/www/rctoursfrontend"
+            echo "Clearing old deployment..."
+            rm -rf $DEPLOY_DIR/*
+            echo "Copying new build..."
+            cp -r dist/* $DEPLOY_DIR/
 
-            
+            # 4️⃣ Fix permissions
+            echo "Fixing permissions..."
+            chown -R www-data:www-data $DEPLOY_DIR
+            chmod -R 755 $DEPLOY_DIR
+
+            # 5️⃣ Restart Nginx
+            echo "Testing Nginx configuration..."
+            nginx -t
+            echo "Restarting Nginx..."
+            systemctl restart nginx
+
+            echo "Deployment complete!"
