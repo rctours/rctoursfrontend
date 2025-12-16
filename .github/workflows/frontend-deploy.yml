@@ -9,21 +9,53 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Checkout code
       - name: Checkout repo
         uses: actions/checkout@v4
 
+      # 2. Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # 3. Deploy to VPS via SSH
       - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
           username: ${{ secrets.VPS_USER }}
           key: ${{ secrets.VPS_KEY }}
+          port: 22
           script: |
             set -e
+            echo "Navigating to deployment folder..."
             cd /var/www/rctoursfrontend
+
+            echo "Pulling latest code..."
             git reset --hard
             git pull origin main
+
+            echo "Installing dependencies..."
             npm ci
+
+            echo "Building Vite app..."
             npm run build
-            # Ensure Nginx serves the build folder
-            chown -R www-data:www-data dist
+
+            echo "Clearing old build files..."
+            rm -rf /var/www/rctoursfrontend/*
+
+            echo "Copying new build..."
+            cp -r dist/* /var/www/rctoursfrontend/
+
+            echo "Fixing permissions..."
+            chown -R www-data:www-data /var/www/rctoursfrontend
+            chmod -R 755 /var/www/rctoursfrontend
+
+            echo "Testing Nginx config..."
+            nginx -t
+
+            echo "Restarting Nginx..."
+            systemctl restart nginx
+
+            echo "Deployment complete!"
