@@ -1,0 +1,29 @@
+name: Deploy React Frontend
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          script: |
+            set -e
+            cd /var/www/rctoursfrontend
+            git reset --hard
+            git pull origin main
+            npm ci
+            npm run build
+            # Ensure Nginx serves the build folder
+            chown -R www-data:www-data dist

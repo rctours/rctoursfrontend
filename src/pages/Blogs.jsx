@@ -9,7 +9,7 @@ const BlogList = () => {
   const [search, setSearch] = useState("");
   const [sortOrder, setSortOrder] = useState("newest");
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(true); // ✅ new loading jto thestate
+  const [loading, setLoading] = useState(true); // ✅ new loading jtos thestate
   const blogsPerPage = 6;
 
   // ✅ Fetch blogs from Strapi
