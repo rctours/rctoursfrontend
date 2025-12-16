@@ -9,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout repo
         uses: actions/checkout@v4
 
-      - name: Deploy to VPS via SSH
+      - name: Deploy to VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -25,4 +25,5 @@ jobs:
             git pull origin main
             npm ci
             npm run build
+            # Ensure Nginx serves the build folder
             chown -R www-data:www-data dist
