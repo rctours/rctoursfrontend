@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Trash2, Search, SortAsc, SortDesc, RefreshCw, Eye, Phone, MessageSquare, Calendar, MapPin, Clock } from "lucide-react";
 
-const API_BASE = "https://appetizing-vacation-f624a8a99b.strapiapp.com/api";
+const API_BASE = "http://72.61.240.241:1337/api";
 
 const ManageMessages = () => {
   const [messages, setMessages] = useState([]);
@@ -258,9 +258,9 @@ const ManageMessages = () => {
                             disabled={updating === msg.documentId}
                             className={`px-2 py-1 border rounded-full text-xs font-medium ${getStatusColor(msg.leadStatus)} ${updating === msg.documentId ? 'opacity-50' : ''}`}
                           >
-                            <option value="Lead Created">Lead Created</option>
-                            <option value="Viewed">Viewed</option>
-                            <option value="Contacted">Contacted</option>
+                            <option value="lead created">Lead Created</option>
+                            <option value="viewed">Viewed</option>
+                            <option value="contacted">Contacted</option>
                           </select>
                         </td>
                         {/* Displaying Date AND Time */}

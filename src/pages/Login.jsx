@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { LogIn, User, Lock, Loader2, Eye, EyeOff } from "lucide-react";
 
 const STRAPI_LOGIN_URL =
-  "https://appetizing-vacation-f624a8a99b.strapiapp.com/api/auth/local";
+  "http://72.61.240.241:1337/api/auth/local";
+// "https://appetizing-vacation-f624a8a99b.strapiapp.com/api/auth/local";
 
 const DASHBOARD_PATH = "/admin";
 
@@ -115,7 +116,7 @@ const LoginPage = () => {
           </div>
 
           <h2 className="text-3xl font-bold text-gray-900 tracking-wide">
-           RC Admin Login
+            RC Admin Login
           </h2>
 
           <p className="mt-2 text-sm text-gray-600">

@@ -22,7 +22,7 @@ import {
   ResponsiveContainer 
 } from "recharts";
 
-const STRAPI_BASE_URL = "https://appetizing-vacation-f624a8a99b.strapiapp.com/api";
+const STRAPI_BASE_URL = "http://72.61.240.241:1337/api";
 
 // --- UI Components ---
 

@@ -88,7 +88,8 @@ const LeadFormWidget = () => {
 
    try {
   const res = await axios.post(
-    "https://appetizing-vacation-f624a8a99b.strapiapp.com/api/messages",
+    "http://72.61.240.241:1337/api/messages",
+    // "http://localhost:1337/api/messages",
     payload,
     { headers: { "Content-Type": "application/json" } }
   );
