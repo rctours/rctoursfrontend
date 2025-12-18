@@ -115,7 +115,7 @@ const CarList = () => {
   const [sort, setSort] = useState("carName:asc");
   const [filterCarType, setFilterCarType] = useState("");
 
-  const API_URL = "http://72.61.240.241:1337/api/cars";
+  const API_URL = "/api/cars";
   // const API_URL = "http://localhost:1337/api/cars";
 
   // Debounce Search Input with Feedback
