@@ -1,5 +1,5 @@
-import React from 'react';
-import { Car } from 'lucide-react';
+import React from "react";
+import { Car } from "lucide-react";
 
 const CarListCard = ({ cars = [] }) => {
   return (
@@ -13,42 +13,43 @@ const CarListCard = ({ cars = [] }) => {
         <table className="min-w-full divide-y divide-gray-200">
           <thead className="bg-gray-50">
             <tr>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Model</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
-              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Brand
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Car
+              </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Color
+              </th>
             </tr>
           </thead>
 
           <tbody className="bg-white divide-y divide-gray-200">
-            {cars?.slice(0, 5).map(car => {
-              const model = car.model || "Unknown Model";
-              const price = car.carName || null;
-              const status = car?.attributes?.status || "Pending";
+            {cars.slice(0, 5).map((item) => {
+              const brand = item?.brand || "Unknown Brand";
+              const carName = item?.carName || "N/A";
+              const color = item?.color || "Unknown";
 
               return (
-                <tr key={car?.id || Math.random()}>
+                <tr key={item?.id}>
                   <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                    {model}
+                    {brand}
                   </td>
+
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {price ? `₹${price.toLocaleString()}` : "N/A"}
+                    {carName}
                   </td>
+
                   <td className="px-6 py-4 whitespace-nowrap">
-                    <span
-                      className={`px-2 inline-flex text-xs leading-5 font-semibold rounded-full ${
-                        status === "Available"
-                          ? "bg-green-100 text-green-800"
-                          : "bg-yellow-100 text-yellow-800"
-                      }`}
-                    >
-                      {status}
+                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800">
+                      {color}
                     </span>
                   </td>
                 </tr>
               );
             })}
           </tbody>
-
         </table>
       </div>
     </section>
