@@ -12,7 +12,7 @@ import {
   Loader2 
 } from "lucide-react";
 
-const API_URL = "https://radiant-comfort-67707de096.strapiapp.com/api/cars";
+const API_URL = "/api/cars";
 
 const ManageCars = () => {
   // State

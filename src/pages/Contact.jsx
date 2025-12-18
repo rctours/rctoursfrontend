@@ -27,7 +27,7 @@ const Contact = () => {
 
     try {
       // POST form data to the specified API endpoint
-      await axios.post("http://localhost:1337/api/contact-form", {
+      await axios.post("api/contact-form", {
         data: formData, // Assuming Strapi expects data wrapped in 'data' object
       });
       setSuccess(true);
