@@ -21,8 +21,8 @@ const CarListCard = ({ cars = [] }) => {
 
           <tbody className="bg-white divide-y divide-gray-200">
             {cars?.slice(0, 5).map(car => {
-              const model = car?.attributes?.model || "Unknown Model";
-              const price = car?.attributes?.price || null;
+              const model = car.model || "Unknown Model";
+              const price = car.carName || null;
               const status = car?.attributes?.status || "Pending";
 
               return (
