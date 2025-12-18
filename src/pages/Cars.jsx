@@ -154,7 +154,7 @@ const CarList = () => {
 
         const { data } = await axios.get(`${API_URL}?${queryParams.toString()}`);
  
-        const STRAPI_URL = "http://72.61.240.241:1337";
+        const STRAPI_URL = "";
 
         // Map Car Objects (unchanged, but ensured images are handled)
         const mappedCars = data.data.map((item) => ({
