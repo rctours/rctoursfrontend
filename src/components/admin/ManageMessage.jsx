@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Trash2, Search, SortAsc, SortDesc, RefreshCw, Eye, Phone, MessageSquare, Calendar, MapPin, Clock } from "lucide-react";
 
-const API_BASE = "http://72.61.240.241:1337/api";
+const API_BASE = "/api";
 
 const ManageMessages = () => {
   const [messages, setMessages] = useState([]);

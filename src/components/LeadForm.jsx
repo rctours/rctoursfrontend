@@ -88,7 +88,7 @@ const LeadFormWidget = () => {
 
    try {
   const res = await axios.post(
-    "http://72.61.240.241:1337/api/messages",
+    "/api/messages",
     // "http://localhost:1337/api/messages",
     payload,
     { headers: { "Content-Type": "application/json" } }

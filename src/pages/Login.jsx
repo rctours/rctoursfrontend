@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { LogIn, User, Lock, Loader2, Eye, EyeOff } from "lucide-react";
 
 const STRAPI_LOGIN_URL =
-  "http://72.61.240.241:1337/api/auth/local";
+  "/api/auth/local";
 // "https://appetizing-vacation-f624a8a99b.strapiapp.com/api/auth/local";
 
 const DASHBOARD_PATH = "/admin";

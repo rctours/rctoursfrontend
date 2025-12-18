@@ -13,7 +13,7 @@ const BlogDetails = () => {
     const fetchBlog = async () => {
       try {
         const res = await axios.get(
-          `http://72.61.240.241:1337/api/blogs/${documentId}?populate=*`
+          `/api/blogs/${documentId}?populate=*`
         );
         setBlog(res.data.data);
       } catch (err) {

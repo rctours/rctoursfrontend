@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const API_BASE = "http://72.61.240.241:1337/api";
+const API_BASE = "/api";
 
 const ManageBlogs = () => {
   const [blogs, setBlogs] = useState([]);

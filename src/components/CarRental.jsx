@@ -23,7 +23,7 @@ const CarImageGallery = ({ images, carName }) => {
     );
   }
 
-  const STRAPI_URL = "http://72.61.240.241:1337";
+  const STRAPI_URL = "";
 
 
   const getImageUrl = (image) =>
@@ -148,7 +148,7 @@ const CarRental = () => {
   const [visibleCount, setVisibleCount] = useState(4);
   const navigate = useNavigate();
 
-  const API_URL = 'http://72.61.240.241:1337/api/cars?populate=*';
+  const API_URL = '/api/cars?populate=*';
 
   useEffect(() => {
     const fetchCars = async () => {

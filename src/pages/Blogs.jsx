@@ -17,7 +17,7 @@ const BlogList = () => {
     setLoading(true);
     axios
       // .get("https://appetizing-vacation-f624a8a99b.strapiapp.com/api/blogs?populate=*")
-      .get("http://72.61.240.241:1337/api/blogs?populate=*")
+      .get("/api/blogs?populate=*")
       .then((res) => {
         const data = res.data.data || [];
         setBlogs(data);

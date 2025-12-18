@@ -20,7 +20,7 @@ const CarImageGallery = ({ images, carName }) => {
     );
   }
 
-  const STRAPI_URL = "http://72.61.240.241:1337";
+  const STRAPI_URL = "";
 
 
   // Get the main image URL (use full URL directly, no BASE_URL prepend)
@@ -92,7 +92,7 @@ const CarDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = `http://72.61.240.241:1337/api/cars/${documentId}?populate=*`;
+  const API_URL = `/api/cars/${documentId}?populate=*`;
 
   useEffect(() => {
     const fetchCar = async () => {
