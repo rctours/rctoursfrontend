@@ -20,8 +20,13 @@ const CarImageGallery = ({ images, carName }) => {
     );
   }
 
+  const STRAPI_URL = "http://72.61.240.241:1337";
+
+
   // Get the main image URL (use full URL directly, no BASE_URL prepend)
-  const mainImageUrl = images[mainImageIndex]?.url;
+  const mainImageUrl = images[mainImageIndex]?.url
+  ? `${STRAPI_URL}${images[mainImageIndex].url}`
+  : null;
 
   // Function to handle thumbnail click
   const handleThumbnailClick = (index) => {
@@ -52,7 +57,10 @@ const CarImageGallery = ({ images, carName }) => {
       {images.length > 1 && (
         <div className="flex gap-2 overflow-x-auto pb-2">
           {images.map((image, index) => {
-            const thumbnailUrl = image.formats?.thumbnail?.url || image.url; // Use thumbnail if available, else full image
+            const thumbnailUrl = image.formats?.thumbnail?.url
+  ? `${STRAPI_URL}${image.formats.thumbnail.url}`
+  : `${STRAPI_URL}${image.url}`;
+ // Use thumbnail if available, else full image
             return (
               <div
                 key={image.id}
@@ -84,7 +92,7 @@ const CarDetails = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const API_URL = `https://radiant-comfort-67707de096.strapiapp.com/api/cars/${documentId}?populate=*`;
+  const API_URL = `http://72.61.240.241:1337/api/cars/${documentId}?populate=*`;
 
   useEffect(() => {
     const fetchCar = async () => {
@@ -110,6 +118,8 @@ const CarDetails = () => {
     );
 
   if (!car) return null;
+
+
 
   // Access images array directly (no attributes nesting)
   const images = car.images || [];

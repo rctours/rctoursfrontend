@@ -115,7 +115,8 @@ const CarList = () => {
   const [sort, setSort] = useState("carName:asc");
   const [filterCarType, setFilterCarType] = useState("");
 
-  const API_URL = "https://radiant-comfort-67707de096.strapiapp.com/api/cars";
+  const API_URL = "http://72.61.240.241:1337/api/cars";
+  // const API_URL = "http://localhost:1337/api/cars";
 
   // Debounce Search Input with Feedback
   useEffect(() => {
@@ -152,6 +153,8 @@ const CarList = () => {
         }
 
         const { data } = await axios.get(`${API_URL}?${queryParams.toString()}`);
+ 
+        const STRAPI_URL = "http://72.61.240.241:1337";
 
         // Map Car Objects (unchanged, but ensured images are handled)
         const mappedCars = data.data.map((item) => ({
@@ -164,7 +167,9 @@ const CarList = () => {
           fuelType: item.fuelType,
           transmission: item.transmission,
           seatingCapacity: item.seatingCapacity,
-          images: item.images?.map((img) => img.url) || [],
+          images: item.images
+  ? item.images.map((img) => `${STRAPI_URL}${img.url}`)
+  : [],
         }));
 
         setCars(mappedCars);

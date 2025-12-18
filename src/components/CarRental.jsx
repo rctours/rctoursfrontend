@@ -23,8 +23,19 @@ const CarImageGallery = ({ images, carName }) => {
     );
   }
 
-  const getImageUrl = (image) => image.formats?.medium?.url || image.url;
-  const getThumbnailUrl = (image) => image.formats?.thumbnail?.url || image.url;
+  const STRAPI_URL = "http://72.61.240.241:1337";
+
+
+  const getImageUrl = (image) =>
+  image.formats?.medium?.url
+    ? `${STRAPI_URL}${image.formats.medium.url}`
+    : `${STRAPI_URL}${image.url}`;
+
+const getThumbnailUrl = (image) =>
+  image.formats?.thumbnail?.url
+    ? `${STRAPI_URL}${image.formats.thumbnail.url}`
+    : `${STRAPI_URL}${STRAPI_URL}${image.url}`;
+
   const mainImage = images[mainImageIndex];
 
   const handleThumbnailClick = (index) => {
@@ -137,7 +148,7 @@ const CarRental = () => {
   const [visibleCount, setVisibleCount] = useState(4);
   const navigate = useNavigate();
 
-  const API_URL = 'https://radiant-comfort-67707de096.strapiapp.com/api/cars?populate=*';
+  const API_URL = 'http://72.61.240.241:1337/api/cars?populate=*';
 
   useEffect(() => {
     const fetchCars = async () => {
