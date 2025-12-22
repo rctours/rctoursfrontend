@@ -42,7 +42,7 @@ function Home() {
       {/* ✅ Page Sections */}
       <Hero />
       <TouristShowcase/>
-      {/* <CarRental /> */}
+      <CarRental />
       <Gallary />
       <DailyServiceRoutes/>
       <TouristPackage/>
