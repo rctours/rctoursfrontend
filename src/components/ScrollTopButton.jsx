@@ -6,7 +6,7 @@ const ScrollTopButton = () => {
   return (
     <button
       onClick={handleScrollTop}
-      className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-950 text-white shadow-lg hover:scale-110 transition-all duration-300 "
+      className="w-12 h-8 flex items-center justify-center rounded-full bg-purple-500/90 opacity-90 text-white shadow-lg hover:scale-110 transition-all duration-300 "
     >
       ↑
     </button>

@@ -4,56 +4,107 @@ import { ChevronDown } from "lucide-react";
 // --- FAQ Data ---
 const faqData = [
   {
-    question: "What is the minimum age to rent a car from RC Car Rental Services?",
+    question: "How can I book a taxi in Nagpur?",
     answer:
-      "The minimum age to rent a car from RC Car Rental Services is generally 21 years. Some premium or luxury car categories require renters to be at least 25 years old.",
+      "You can book a taxi in Nagpur by calling us directly on 📞 9172271464 or 8446431819. Instant confirmation is provided."
   },
   {
-    question: "Do I need a valid driving license to rent a car from RC Car Rental Services?",
+    question: "Do you provide cars with driver in Nagpur?",
     answer:
-      "Yes, a valid driving license is mandatory to rent and drive any car from RC Car Rental Services. You must present it during the rental process.",
+      "Yes, all our taxi services include a professional and experienced driver. We do not offer self-drive cars."
   },
   {
-    question: "What documents are required to rent a car from RC Car Rental Services as a foreigner?",
+    question: "What types of taxi services do you offer?",
     answer:
-      "Foreign customers need to provide a valid passport, visa, an International Driving Permit (IDP) with their original driving license from their home country, and a credit card for the security deposit.",
+      "We provide local taxi services in Nagpur, outstation taxis, airport pickup and drop, as well as one-way and round-trip services."
   },
   {
-    question: "Who is responsible for traffic violations during the car rental period?",
+    question: "Is Nagpur airport taxi service available 24/7?",
     answer:
-      "The renter is fully responsible for any traffic violations such as speeding or illegal parking. Any fines or penalties will be charged against the security deposit or billed separately.",
+      "Yes, we offer 24×7 airport pickup and drop services at Nagpur Airport with on-time assurance."
   },
   {
-    question: "Can I rent a car with an international driving license from RC Car Rental Services?",
+    question: "Are your taxi services available at night or early morning?",
     answer:
-      "Yes, you can rent a car with an international driving license. It is recommended to carry your original license along with an International Driving Permit (IDP) for easier verification.",
+      "Yes, our taxi services operate 24/7, including late-night and early-morning travel."
   },
   {
-    question: "How does renting a car from RC Car Rental Services compare with taking taxis or cabs?",
+    question: "How are taxi charges calculated?",
     answer:
-      "Renting a car offers you more control over your travel itinerary, privacy, and flexibility, especially for multi-stop journeys. Taxis and cabs provide convenience but may be less flexible for extensive travel plans.",
+      "Taxi charges depend on distance traveled, type of trip (local or outstation), car model, and trip duration. Call us for exact fare details."
   },
   {
-    question: "What are the top transport options recommended by RC Car Rental Services for tourists and locals?",
+    question: "What cars are available with driver?",
     answer:
-      "We recommend self-drive car rentals for tourists seeking freedom to explore at their own pace. Locals often combine self-drive with public transport and ride-sharing based on their travel needs.",
+      "We offer Ertiga, Rumion, Taisor, and other clean and comfortable sedans and SUVs suitable for family and outstation travel."
   },
   {
-    question: "Is renting a car from RC Car Rental Services a better option than local transport for exploring India?",
+    question: "Do you provide one-way taxi services?",
     answer:
-      "Yes, renting a car provides easier access to remote or off-beat destinations and flexibility in travel timing, which local public transport may not always offer.",
+      "Yes, we offer both one-way and round-trip taxi services for local and outstation travel."
   },
   {
-    question: "How do fuel and rental costs for RC Car Rental Services compare with ride-sharing fares?",
+    question: "Can I book a taxi for outstation travel from Nagpur?",
     answer:
-      "For short trips, ride-sharing can be economical. For longer trips or multiple stops, renting a car is often more cost-effective, especially when considering fuel efficiency and rental rates.",
+      "Yes, outstation taxi services are available from Nagpur to nearby cities and tourist destinations."
   },
   {
-    question: "Which transport option is the most affordable according to RC Car Rental Services?",
+    question: "Is advance booking required for taxi service?",
     answer:
-      "Public transport like trains and long-distance buses remain the cheapest. For city travel, ride-sharing is economical. Self-drive rentals are cost-efficient for groups or long-term travel plans.",
+      "Same-day booking is possible for local travel. Advance booking is recommended for outstation trips and airport transfers."
   },
+  {
+    question: "What payment methods do you accept?",
+    answer:
+      "We accept cash, UPI payments, and online bank transfers. Payment details are shared during booking."
+  },
+  {
+    question: "Is your taxi service suitable for family travel?",
+    answer:
+      "Yes, our taxis are safe, spacious, and ideal for family trips, including long-distance and outstation travel."
+  },
+  {
+    question: "Do you provide taxis for business or corporate travel?",
+    answer:
+      "Yes, we provide reliable taxi services for corporate meetings, business travel, and official purposes."
+  },
+  {
+    question: "Are your drivers experienced and verified?",
+    answer:
+      "Yes, all our drivers are professionally trained, background-verified, and experienced in local and highway routes."
+  },
+  {
+    question: "Can I schedule a taxi in advance for a specific date and time?",
+    answer:
+      "Yes, you can pre-book a taxi for a specific date and time by calling us in advance."
+  },
+  {
+    question: "Do you provide taxis for sightseeing in and around Nagpur?",
+    answer:
+      "Yes, we offer local sightseeing taxi services in Nagpur and nearby tourist locations."
+  },
+  {
+    question: "Is luggage space available in your cars?",
+    answer:
+      "Yes, all our vehicles have sufficient luggage space suitable for airport and outstation travel."
+  },
+  {
+    question: "Do you charge extra for night travel?",
+    answer:
+      "Night charges, if applicable, are clearly informed at the time of booking."
+  },
+  {
+    question: "What happens if my flight or train is delayed?",
+    answer:
+      "We monitor delays where possible and coordinate with the driver to ensure smooth pickup. Please inform us in case of major delays."
+  },
+  {
+    question: "How can I contact customer support for taxi booking?",
+    answer:
+      "You can reach our customer support team directly by calling 📞 9172271464 or 8446431819 for quick assistance."
+  }
 ];
+
 
 
 // --- FAQ Item Component ---
@@ -69,15 +120,13 @@ const FAQItem = ({ question, answer }) => {
       >
         <span>{question}</span>
         <ChevronDown
-          className={`h-5 w-5 text-gray-500 transition-transform duration-300 ${
-            isOpen ? "rotate-180" : ""
-          }`}
+          className={`h-5 w-5 text-gray-500 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+            }`}
         />
       </button>
       <div
-        className={`grid overflow-hidden transition-all bg-primary-50 duration-500 ease-in-out ${
-          isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
+        className={`grid overflow-hidden transition-all bg-primary-50 duration-500 ease-in-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
       >
         <div className="overflow-hidden">
           <p className="px-6 pb-4 text-gray-600 leading-relaxed">
@@ -100,11 +149,12 @@ const FAQSection = () => {
             Got Questions?
           </h2>
           <h1 className="text-4xl font-extrabold text-text-heading mb-4">
-            Planning Your Car Rental? Check Our FAQs
+            Car Service in Nagpur – FAQs
           </h1>
           <p className="text-text-sub text-lg max-w-2xl mx-auto">
-            Find quick answers to the most common questions about self-drive car rentals in India.
+            Get clear answers about our local, outstation, and airport taxi services in Nagpur.
           </p>
+
         </div>
 
         {/* FAQ Grid */}

@@ -135,7 +135,7 @@ const LeadFormWidget = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-4 sm:right-2 z-50 flex flex-col items-center font-sans">
+    <div className="fixed bottom-13 right-4 sm:right-2 z-50 flex flex-col items-center font-sans">
 
       <div
         className={`
@@ -143,7 +143,7 @@ const LeadFormWidget = () => {
           shadow-2xl overflow-hidden border border-white/40 backdrop-blur-xl
           ${isOpen
             ? "w-[320px] h-[550px] rounded-2xl backdrop-blur-2xl bg-primary-700/50"
-            : "md:h-15 h-10 sm:h-10 w-40 md:w-40 hover:w-80 hover:ml-3 hover:items-end rounded-full bg-gradient-to-r from-primary-700 to-primary-500 cursor-pointer group"
+            : "md:h-10 h-10 sm:h-10 w-40 md:w-40 hover:w-80 hover:ml-3 hover:items-end rounded-full bg-gradient-to-r from-primary-700 to-primary-500 cursor-pointer group"
           }
         `}
       >
@@ -160,7 +160,7 @@ const LeadFormWidget = () => {
           <img
             src="/earth.avif"
             alt="chat"
-            className="w-10 h-10 sm:w-10 sm:h-10 md:w-15 md:h-15 rounded-4xl object-cover transition-all duration-500 group-hover:translate-x-[-2px]"
+            className="w-10 h-10 sm:w-10 sm:h-10 md:w-10 md:h-10 rounded-4xl object-cover transition-all duration-500 group-hover:translate-x-[-2px]"
           />
           <span className="ml-0 text-white font-semibold sm:text-sm md:text-md whitespace-nowrap opacity-90 group-hover:opacity-100 transition-opacity duration-500 font-bold px-1">
             Tour Enquiry

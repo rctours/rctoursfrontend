@@ -1,10 +1,11 @@
 import React, { useState } from 'react'; // Added useState import
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import Particles from './ParticleBg';
 import ScrollToTop from './ScrollToTop';
 import ScrollTopButton from './ScrollTopButton';
 import LeadModal from './Modal'; // Added LeadModal import (adjust path if needed)
 import LeadFormWidget from './LeadForm';
+import { MessageCircle, Phone } from 'lucide-react';
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -124,33 +125,39 @@ const Footer = () => {
         </div> */}
       </footer>
 
-      {/* Fixed Social Icons (Right Center) */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50">
-        <a
-          href="https://www.facebook.com/profile.php?id=61582877115403&mibextid=rS40aB7S9Ucbxw6v"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-lg hover:scale-110 hover:bg-blue-700 transition-all duration-300"
-        >
-          <FaFacebookF size={20} />
-        </a>
-        <a
-          href="https://www.instagram.com/rccab_services_nagpur?igsh=emw4NmJ4bWczdzM1"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 text-white shadow-lg hover:scale-110 transition-all duration-300"
-        >
-          <FaInstagram size={22} />
-        </a>
-      </div>
+    {/* Fixed Call & WhatsApp Buttons (Right Center) */}
+<div className="fixed right-4 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50">
+
+  {/* 📞 Call Button */}
+  <a
+    href="tel:+919172271464"
+    className="w-14 h-14 flex items-center justify-center rounded-full bg-amber-500 text-black shadow-xl hover:scale-110 hover:bg-amber-400 transition-all duration-300"
+    aria-label="Call Taxi Service Nagpur"
+  >
+    <Phone size={24} />
+  </a>
+
+  {/* 🟢 WhatsApp Button */}
+  <a
+href="https://wa.me/919172271464?text=Hi%2C%20I%20want%20to%20book%20a%20taxi%20in%20Nagpur.%0A%0APickup%3A%0ADrop%3A%0ADate%20%26%20Time%3A%0ANumber%20of%20Passengers%3A"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-14 h-14 flex items-center justify-center rounded-full bg-green-600 text-white shadow-xl hover:scale-110 hover:bg-green-500 transition-all duration-300"
+    aria-label="WhatsApp Taxi Booking Nagpur"
+  >
+    <FaWhatsapp size={24} />
+  </a>
+
+</div>
+
 
      <LeadFormWidget/>
 
 
 
       {/* Scroll-to-Top Button (Bottom Right) */}
-      <div className="fixed right-4 bottom-26 z-50">
-        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-900 text-white shadow-lg hover:scale-110 transition-all duration-300">
+      <div className="fixed right-3 bottom-3 z-50">
+        <div className="w-8 h-8 flex items-center justify-center rounded-full bg-purple-900 text-white shadow-lg hover:scale-110 transition-all duration-300">
           <ScrollTopButton />
         </div>
       </div>
