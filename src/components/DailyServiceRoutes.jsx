@@ -30,7 +30,7 @@ const DailyServiceRoutes = () => {
   return (
     <div className="max-w-screen mx-auto px-4 sm:px-6 lg:px-8 font-sans">
       <Helmet>
-        <title>Car Rental Service in Nagpur</title>
+        <title>Car Rentals in Nagpur</title>
         <meta name="description" content="Daily car services from Nagpur" />
       </Helmet>
 

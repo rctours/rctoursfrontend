@@ -10,7 +10,9 @@ import {
   FaCalendarAlt,
   FaArrowUp,
   FaAngleDoubleUp,
-  FaAngleDoubleDown
+  FaAngleDoubleDown,
+  FaCross,
+  FaWindowClose
 } from "react-icons/fa";
 
 const LeadFormWidget = () => {
@@ -33,14 +35,21 @@ const LeadFormWidget = () => {
   const [loading, setLoading] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
 
-  useEffect(() => {
-    const submitted = localStorage.getItem('formSubmitted') === 'true';
+ useEffect(() => {
+  const timer = setTimeout(() => {
+    const submitted = localStorage.getItem("formSubmitted") === "true";
     console.log(submitted);
+
     setHasSubmitted(submitted);
+
     if (!submitted) {
       setIsOpen(true);
     }
-  }, []);
+  }, 60000); // ⏱ 1 minute delay
+
+  return () => clearTimeout(timer); // cleanup
+}, []);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -142,7 +151,7 @@ const LeadFormWidget = () => {
           relative transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)] 
           shadow-2xl overflow-hidden border border-white/40 backdrop-blur-xl
           ${isOpen
-            ? "w-[320px] h-[550px] rounded-2xl backdrop-blur-2xl bg-primary-700/50"
+            ? "w-[320px] h-[500px] rounded-2xl backdrop-blur-2xl bg-primary-700/50"
             : "md:h-10 h-10 sm:h-10 w-40 md:w-40 hover:w-80 hover:ml-3 hover:items-end rounded-full bg-gradient-to-r from-primary-700 to-primary-500 cursor-pointer group"
           }
         `}
@@ -175,7 +184,7 @@ const LeadFormWidget = () => {
         >
 
           {/* Header */}
-          <div className="flex items-center justify-between px-4 py-4 bg-linear-to-t from-purple-900 to-primary-700 text-white shadow-md shrink-0">
+          <div className="flex items-center justify-between px-4 py-2 bg-linear-to-t from-purple-900 to-primary-700 text-white shadow-md shrink-0">
             <div className="flex items-center gap-2">
               <FaMapMarkerAlt className="text-purple-200 text-lg" />
               <h3 className="font-bold text-xl tracking-wide">Tour Enquiry</h3>
@@ -192,18 +201,18 @@ const LeadFormWidget = () => {
                     if (!hasSubmitted) {
                       setIsOpen(true);
                     }
-                  }, 40000);
+                  }, 60000);
                 }
               }}
-              className="text-white/80 hover:text-white transition-transform duration-200 p-1"
+              className="text-rose-500/80 hover:text-red-300 transition-transform duration-200 p-1"
             >
-              <FaAngleDoubleDown size={28} />
+              <FaWindowClose size={28} />
             </button>
           </div>
 
           {/* Form Scroll Area */}
-          <div className="flex-1 overflow-y-auto p-6 custom-scrollbar">
-            <form className="space-y-5" onSubmit={handleSubmit}>
+          <div className="flex-1 overflow-y-auto px-6 custom-scrollbar">
+            <form className="space-y-2" onSubmit={handleSubmit}>
 
               {/* Name */}
               <InputField
