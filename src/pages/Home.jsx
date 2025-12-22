@@ -19,6 +19,7 @@ import GlobalImpact from '../components/GloableImpact';
 function Home() {
   return (
     <>
+
       {/* ✅ SEO Metadata */}
       <Helmet>
         <title>RCTours | Explore the World with Us</title>
@@ -41,15 +42,14 @@ function Home() {
 
       {/* ✅ Page Sections */}
       <Hero />
-      <TouristShowcase/>
+      <TouristShowcase />
       <CarRental />
       <Gallary />
-      <DailyServiceRoutes/>
-      <TouristPackage/>
+      <DailyServiceRoutes />
+      <TouristPackage />
       <VideoGallery />
-
       <HowItWorks />
-      <GlobalImpact/>
+      <GlobalImpact />
       <ScrollCarousel />
       <Features />
       <PopularCars />

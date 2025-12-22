@@ -2,10 +2,31 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Phone, MessageCircle, Car } from "lucide-react";
 import { FaWhatsapp } from 'react-icons/fa';
+import { Helmet } from "react-helmet";
 
 
 const Hero = () => {
   return (
+<>
+      <Helmet>
+        <title>Reliable Taxi Service in Nagpur | RC Tours and Travels</title>
+        <meta
+          name="description"
+          content="Book professional taxi with driver in Nagpur. Local, outstation & airport taxi service. Clean cars, experienced drivers & instant booking. Call 9172271464."
+        />
+        <meta
+          name="keywords"
+          content="Nagpur taxi, airport taxi Nagpur, outstation taxi, car with driver Nagpur, RC Tours and Travels"
+        />
+        {/* Open Graph */}
+        <meta property="og:title" content="Reliable Taxi Service in Nagpur" />
+        <meta property="og:description" content="Book professional taxi with driver in Nagpur. Local, outstation & airport taxi service." />
+        <meta property="og:image" content="/HeroImage.jpg" />
+        <meta property="og:url" content="https://rctoursandtravels.in" />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
+
     <section
       id="home"
       className="relative min-h-screen w-full bg-cover bg-center bg-no-repeat flex flex-col items-center justify-center text-center overflow-hidden"
@@ -100,6 +121,7 @@ const Hero = () => {
         <p className="text-xs mt-2 tracking-wide">Scroll to explore</p>
       </div>
     </section>
+</>
   );
 };
 
