@@ -159,78 +159,7 @@ const CarDetails = () => {
             <p><strong>Registration Number:</strong> {car.registrationNumber}</p>
           </div>
 
-          {/* Rental Details */}
-          {car.rentalDetails && (
-            <section className="mt-8 bg-primary-50 p-4 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Rental Details</h3>
-              <p>Price per day: ₹{car.rentalDetails.pricePerDay}</p>
-              <p>Price per hour: ₹{car.rentalDetails.pricePerHour}</p>
-              <p>Minimum Booking Hours: {car.rentalDetails.minimumBookingHours}</p>
-              <p>Available: {car.rentalDetails.available ? "Yes" : "No"}</p>
-            </section>
-          )}
-
-          {/* Features */}
-          {car.features && (
-            <section className="mt-8 bg-primary-50 p-4 rounded-xl-xl">
-              <h3 className="text-xl font-semibold mb-2">Features</h3>
-              <ul className="grid grid-cols-2 gap-2 text-gray-700">
-                {Object.entries(car.features).map(
-                  ([feature, val]) =>
-                    val === true || typeof val === "number" ? (
-                      <li key={feature} className="capitalize flex items-center gap-2">
-                        <FiCheck className="text-green-600 text-lg" />
-                        {feature.replace(/([A-Z])/g, " $1")}
-                      </li>
-                    ) : null
-                )}
-              </ul>
-            </section>
-          )}
-
-          {/* Documents */}
-          {car.documents && (
-            <section className="mt-8 bg-primary-50 p-4 rounded-xl-xl">
-              <h3 className="text-xl font-semibold mb-2">Documents</h3>
-              <ul className="grid grid-cols-2 gap-2 text-gray-700">
-                {Object.entries(car.documents).map(
-                  ([doc, val]) =>
-                    val ? (
-                      <li
-                        key={doc}
-                        className="capitalize flex items-center gap-2"
-                      >
-                        <HiCheck className="text-green-600 text-lg" />
-                        {doc.replace(/([A-Z])/g, " $1")}
-                      </li>
-
-                    ) : null
-                )}
-              </ul>
-            </section>
-          )}
-
-          {/* Rental Policy */}
-          {car.rentalPolicy && (
-            <section className="mt-8 bg-primary-50 p-4 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Rental Policy</h3>
-              <p>Security Deposit: ₹{car.rentalPolicy.securityDeposit}</p>
-              <p>Late Return Charges per Hour: ₹{car.rentalPolicy.lateReturnChargesPerHour}</p>
-              <p>Driver Age Limit: {car.rentalPolicy.driverAgeLimit} years</p>
-              <p>License Requirement: {car.rentalPolicy.licenseRequirement}</p>
-              <p>Fuel Policy: {car.rentalPolicy.fuelPolicy}</p>
-            </section>
-          )}
-
-          {/* Availability */}
-          {car.availability && (
-            <section className="mt-8 bg-primary-50 p-4 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Availability</h3>
-              <p>Available From: {new Date(car.availability.availableFrom).toLocaleDateString()}</p>
-              <p>Status: {car.availability.isAvailable ? "Available" : "Not Available"}</p>
-            </section>
-          )}
-
+        
           {/* Reviews */}
           {car.reviews && car.reviews.length > 0 && (
             <section className="mt-8 bg-primary-50 p-4 rounded-xl">
